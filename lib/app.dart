@@ -1,6 +1,7 @@
 import 'package:flutter/material.dart';
+
+import 'core/navigation/bottom_navigation.dart';
 import 'core/theme/app_theme.dart';
-import 'features/splash/presentation/splash_screen.dart';
 
 class MedFinderApp extends StatelessWidget {
   const MedFinderApp({super.key});
@@ -11,7 +12,11 @@ class MedFinderApp extends StatelessWidget {
       debugShowCheckedModeBanner: false,
       title: 'MedFinder',
       theme: AppTheme.lightTheme,
-      home: const SplashScreen(),
+
+      // TEMPORARY:
+      // Directly opens the main app for development.
+      // We'll restore Splash -> Login -> Home later.
+      home: const BottomNavigationPage(),
     );
   }
 }
