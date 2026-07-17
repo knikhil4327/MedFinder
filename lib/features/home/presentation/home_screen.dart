@@ -6,6 +6,7 @@ import 'widgets/emergency_card.dart';
 import 'widgets/category_card.dart';
 import 'widgets/pharmacy_card.dart';
 import 'widgets/medicine_card.dart';
+import '../../search/presentation/search_screen.dart';
 
 class HomeScreen extends StatelessWidget {
   const HomeScreen({super.key});
@@ -25,7 +26,14 @@ class HomeScreen extends StatelessWidget {
 
               Padding(
                 padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: HomeSearchBar(onTap: () {}),
+                child: HomeSearchBar(
+                  onTap: () {
+                    Navigator.push(
+                      context,
+                      MaterialPageRoute(builder: (_) => const SearchScreen()),
+                    );
+                  },
+                ),
               ),
 
               const SizedBox(height: 20),
